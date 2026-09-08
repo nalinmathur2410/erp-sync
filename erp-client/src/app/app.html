@@ -1,0 +1,17 @@
+<header>
+  <h1>Offline ERP App</h1>
+  <nav>
+    <a routerLink="/products" routerLinkActive="active">Products</a> |
+    <a routerLink="/transactions" routerLinkActive="active">Transactions</a>
+  </nav>
+</header>
+
+<hr>
+
+  @if (!syncService.online) {
+    <p style="color:red">
+      Offline mode: changes will sync automatically when connection is restored.
+    </p>
+  }
+
+  <router-outlet></router-outlet>
