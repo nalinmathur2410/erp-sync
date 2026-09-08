@@ -1,0 +1,17 @@
+<h2>Transactions</h2>
+<form (ngSubmit)="addTransaction()">
+  <input [(ngModel)]="newTransaction.productId" name="productId" placeholder="Product ID" required>
+  <input [(ngModel)]="newTransaction.quantity" name="quantity" type="number" placeholder="Quantity" required>
+  <input [(ngModel)]="newTransaction.date" name="date" type="date" required>
+  <button type="submit">Add Transaction</button>
+</form>
+
+@if (!syncService.online) {
+  <p style="color:red">Offline: changes will sync automatically</p>
+}
+
+<ul>
+  @for (t of transactions; track t) {
+    <li>{{ t.id }} - {{ t.productId }} - {{ t.quantity }} - {{ t.date | date }}</li>
+  }
+</ul>

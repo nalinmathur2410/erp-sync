@@ -1,0 +1,32 @@
+# Dependencies
+**/node_modules/
+
+# Angular
+erp-client/.angular/
+erp-client/dist/
+
+# NestJS
+erp-server/dist/
+erp-server/coverage/
+erp-server/.eslintcache
+
+# Environment / secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local tooling / generated artifacts
+.lh/
+**/.lh/
+*.tsbuildinfo
+erp-client/.editorconfig
